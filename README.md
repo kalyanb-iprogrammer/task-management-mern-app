@@ -12,15 +12,6 @@ MERN Application for Task Management
 <br />
 <div align="center">
   <h3 align="center">Task Management with MERN</h3>
-
-  <h4 align="center">
-    Screenshots
-  </h4>
-    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-12-22.png" alt="Logo" width="250" height="200">
-    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-12-46.png" alt="Logo" width="250" height="200">
-    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-14-05.png" alt="Logo" width="250" height="200">
-    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-14-27.png" alt="Logo" width="250" height="200">
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -176,6 +167,56 @@ Follow below steps to get the project up and running in your local system.
    npm run dev
    ```
    Client will start on port 8081.
+
+# SonarQube Code Quality Summary
+If you are interested in generating a summary for code quality, please follow these instructions:
+
+## Setup Local SonarQube
+Download and setup SonarQube from [here](https://www.sonarsource.com/products/sonarqube/downloads/).
+
+## Start Local SonarQube Server
+First, navigate to the SonarQube installation directory, and then run the start script in the `bin` folder for your operating system.
+
+
+## Using The SonarQube UI:
+Open your browser and go to http://localhost:8081, log in with the default credentials ("admin" and "admin"). You'll be prompted to change the password on first login.
+
+Create a new project in SonarQube:
+
+- Go to "Projects" -> "Create a local project".
+- Create a project with the name "Task Management", and key "task-management".
+- In the "Analyze your project" step, select "main" branch.
+- Use the "global setting" for "Choose the baseline for new code for this project".
+
+## Generate The SonarQube Token
+Go to your user account (top-right corner) -> "My Account" -> "Security" and generate a new Project Analysis Token for the project that was just created, and save it securely. This will be used to run SonarQube.
+
+Open `/sonar-project.properties` in the project, and replace `<SONAR_TOKEN>` with the token that was generated, and save the file.
+
+## Run SonarQube
+In order to run the analysis, first generate the coverage reports:
+```bash
+yarn coverage
+```
+
+Then, run SonarQube with the following:
+
+```bash
+yarn sonar
+```
+
+This in-built command will generate the coverage report first automatically, and the results will be visible in the SonarQube UI at http://localhost:8081/dashboard?id=task-management. Note that this can URL change based on any custom configurations you have made, please refer to the terminal for the final URL.
+
+<!-- Screenshots -->
+<div align="center">
+  <h4 align="center">
+   Here are some screenshots of the project:
+  </h4>
+    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-12-22.png" alt="Logo" width="250" height="200">
+    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-12-46.png" alt="Logo" width="250" height="200">
+    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-14-05.png" alt="Logo" width="250" height="200">
+    <img src="frontend/public/screenshot/Screenshot from 2024-08-26 13-14-27.png" alt="Logo" width="250" height="200">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

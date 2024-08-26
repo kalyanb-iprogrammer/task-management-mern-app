@@ -1,5 +1,6 @@
 const { catchErrors } = require("../handlers/errorHandlers");
 const { successResponse } = require("../handlers/successHandler");
+const { AVATAR_URL } = require("../utils/constants");
 
 // Fetch User Details
 
@@ -13,7 +14,7 @@ const UserDetails = async (req, res) => {
                 id,
                 email,
                 displayName: first_name + ' ' + last_name,
-                photoURL: "https://api-dev-minimal-v6.vercel.app/assets/images/avatar/avatar-25.webp"
+                photoURL: AVATAR_URL
             }
         }
 
