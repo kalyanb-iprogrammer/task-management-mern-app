@@ -187,7 +187,7 @@ Create a new project in SonarQube:
 ## Generate The SonarQube Token
 Go to your user account (top-right corner) -> "My Account" -> "Security" and generate a new Project Analysis Token for the project that was just created, and save it securely. This will be used to run SonarQube.
 
-Open `/sonar-project.properties` in the project, and replace `<SONAR_TOKEN>` with the token that was generated, and save the file.
+Open `/frontend/sonar-project.properties` in the project, and replace `<SONAR_TOKEN>` with the token that was generated, and save the file.
 
 ## Run SonarQube
 In order to run the analysis, first generate the coverage reports:
@@ -216,6 +216,11 @@ This in-built command will generate the coverage report first automatically, and
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<h5>NOTE : Due to time constraint I was not able to perform following </h5>
+
+<ul>
+<li>Unit Testing Script for my frontend and backend code</li>
+</ul>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
