@@ -46,7 +46,7 @@ A Task Management app build in MERN (MySQL, Express, React, Node). App have Dasb
 
 ### Built With
 
-This is a MERN project. Used <a href="https://mongoosejs.com/">Mongoose</a> ORM for mongodb.
+This is a MERN project. Used <a href="https://sequelize.org/">Sequelize</a> ORM for MySQL.
 
 - [![Mongo][MySQL]][MySQL-url]
 - [![Express][Express.js]][Express-url]
