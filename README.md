@@ -8,11 +8,7 @@ MERN Application for Task Management
 *** READ ME for Task Management
 -->
 
-<!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <h3 align="center">Task Management with MERN</h3>
-</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
