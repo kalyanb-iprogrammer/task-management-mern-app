@@ -1,17 +1,27 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/server.js"
   },
-  "keywords": [],
   "author": "Kalyan B",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mysql2": "^3.11.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "sequelize": "^6.37.3",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0"
   }
 }
