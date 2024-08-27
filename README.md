@@ -207,7 +207,7 @@ This in-built command will generate the coverage report first automatically, and
 
 # DB Migation using Sequelize
 
-Update the config.json file inside backend/config folder
+Update the config.json file inside backend/config folder.
 
 ```json
    {
@@ -220,30 +220,42 @@ Update the config.json file inside backend/config folder
     }
    }
 ```
-Go to project root location from terminal. Then Go to backend folder by running following command
+Go to project root location from terminal. Then Go to backend folder by running following:
 
 ```bash
    cd backend
 ```
 
-To run Migration files execute the below command to create tables
+To run Migration files execute the below command to create tables.
 
 ```bash
    npx sequelize-cli db:migrate
 ```
 
-For reverting migration run below command
+For reverting migration run below command.
 
 ```bash
    npx sequelize-cli db:migrate:undo
 ```
 
-(Optional) For Inserting some sample data in users table in seeders folder in backend
+(Optional) For Inserting some sample data in users table update the js file in the backend/seeders folder.
 
+```js
+        await queryInterface.bulkInsert('users', [{
+        first_name: 'user_first_name',
+        last_name: 'user_last_name',
+        email: 'user_email',
+        password: 'user_encrypted_password',
+        salt: 'generated_salt',
+        created_at: new Date()
+     }], {});
+```
+
+Run below command for Inserting above user/users.
 ```bash
    npx sequelize-cli db:seed:all
 ```
-To undo the last seeds execute the below command
+To undo the last seeds execute the below command.
 
 ```bash
    npx sequelize-cli db:seed:undo:all
