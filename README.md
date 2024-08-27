@@ -201,7 +201,53 @@ Then, run SonarQube with the following:
 yarn sonar
 ```
 
+
 This in-built command will generate the coverage report first automatically, and the results will be visible in the SonarQube UI at http://localhost:8081/dashboard?id=task-management. Note that this can URL change based on any custom configurations you have made, please refer to the terminal for the final URL.
+
+
+# DB Migation using Sequelize
+
+Update the config.json file inside backend/config folder
+
+```json
+   {
+    "development": {
+      "username": "your_db_username",
+      "password": "your_db_password",
+      "database": "your_db_name",
+      "host": "your_db_host",
+      "dialect": "mysql"
+    }
+   }
+```
+Go to project root location from terminal. Then Go to backend folder by running following command
+
+```bash
+   cd backend
+```
+
+To run Migration files execute the below command to create tables
+
+```bash
+   npx sequelize-cli db:migrate
+```
+
+For reverting migration run below command
+
+```bash
+   npx sequelize-cli db:migrate:undo
+```
+
+(Optional) For Inserting some sample data in users table in seeders folder in backend
+
+```bash
+   npx sequelize-cli db:seed:all
+```
+To undo the last seeds execute the below command
+
+```bash
+   npx sequelize-cli db:seed:undo:all
+```
 
 <!-- Screenshots -->
 <div align="center">
