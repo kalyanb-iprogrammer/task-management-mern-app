@@ -133,32 +133,25 @@ Follow below steps to get the project up and running in your local system.
         . Redux
         . ChartJS
 
-1. Install nvm and install node version 20 with this command
-
-   ```sh
-   nvm install 20
-   nvm use 20
-   ```
-
-2. Open another tab in terminal . Switch back to project root directory and execute below command
+1. Open another tab in terminal . Switch back to project root directory and execute below command
    ```sh
    cd frontend
    ```
-3. Install all packages
+2. Install all packages
 
    ```sh
    npm i
    ```
-3. Create `.env` file
+4. Create `.env` file
    ```sh
    touch .env
    ```
-4. Edit `.env` file
+5. Edit `.env` file
 
    ```js
     VITE_SERVER_URL=http://localhost:8888
 
-5. Run client
+6. Run client
    ```sh
    npm run dev
    ```
